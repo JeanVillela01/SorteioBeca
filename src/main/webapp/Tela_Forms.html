@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="StyleSheet" href="<%=request.getContextPath()%>../webapp/style.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Cadastrar Participantes</title>
+</head>
+
+<body style="overflow: hidden;">
+    <div class="btn-group">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          Menu
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="realizarSorteio">Sorteio</a></li>
+          <li><a class="dropdown-item" href="ListaParticipantes">Lista de Participantes</a></li>
+          <li><a class="dropdown-item" href="Tela_Forms">Adicionar Participantes</a></li>
+        </ul>
+      </div>
+
+      <div class="imagens">
+        <img class="img-bandeira" src="../resources/static/baneira.png" width="390px" heigh="300px">
+        <img class="img-festa" src="../resources/static/cadparticipante.png" width="480px" height="620px">
+        <img class="img-bandeira2" src="../resources/static/baneira.png" width="350px" heigh="300px">
+        <img class="fogo" src="../resources/static/fogueira.png">
+        <img class="balao" src="../resources/static/baloes.png">
+      </div>
+    <div class="classe-center">
+        <form action="/SorteioBeca/Tela_Forms" method="post">
+            <label class="etiqueta_forms" id="none" for="entrada_nome">Nome do Participantezinho</label>
+            <br>
+            <br>
+            <input type="text" name="nome" id="entrada_nome" required />
+            <br>
+            <br>
+            <label class="etiqueta_forms" id="email" for="entrada_email">E-mail do Participante</label>
+            <br>
+            <br>
+            <input type="email" name="email" id="entrada_email" required />
+            <br>
+            <br>
+            <input type="submit" class="btn btn-outline-secondary">
+        </form>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+</html>

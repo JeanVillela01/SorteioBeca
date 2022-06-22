@@ -1,0 +1,77 @@
+html, body{
+    padding: 0%;
+    padding-bottom: 0%;
+    background-color: black;
+
+}
+
+.img-festa{
+    margin-left: 30%;
+    margin-top: 0.5%;
+}
+
+.classe-center{
+    position: absolute;
+    text-align: center;
+    margin-left: 550px;
+    top: 350px;
+}
+
+.img-bandeira{
+    position: absolute;
+    top: 40px;
+    width: 430px;
+    margin-left: 10px;
+}
+
+.img-bandeira2{
+    position: absolute;
+    top: 14px;
+    width: 430px;
+    margin-left: -20px;
+}
+
+
+.lista-participantes{
+    width: 100%;
+    margin-left: 370px;
+    position: absolute;
+    top: 360px;
+    
+}
+
+.img-festa3{
+    margin-left: 32%;
+    margin-top: 0.5%;
+}
+
+.btn-success{
+    margin-left: 42%;
+    position: absolute;
+    top: 440px;
+    padding: 1.0%;
+    width: 200px
+       
+}
+
+.img-mid{
+    position: absolute;
+    width: 480px;
+    height: 600px;
+}
+
+.fogo{
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    margin-left: 150px;
+    top: 300px;
+}
+
+.balao{
+    position: absolute;
+    width: 220px;
+    height: 250px;
+    margin-left: -800px;
+    top: 200px;
+}
