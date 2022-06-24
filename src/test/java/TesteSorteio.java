@@ -1,4 +1,4 @@
-import com.example.sorteiobeca.Classes.BancoParticipante;
+import com.example.sorteiobeca.Classes.BancoParticipantesDeferidos;
 import com.example.sorteiobeca.Classes.Participante;
 import com.example.sorteiobeca.service.Sorteio;
 import java.util.Collection;
@@ -7,7 +7,7 @@ public class TesteSorteio {
 
     public static void main(String[] args) {
 
-        BancoParticipante bancoParticipante = new BancoParticipante();
+        BancoParticipantesDeferidos bancoParticipante = new BancoParticipantesDeferidos();
         Sorteio novoSorteio = new Sorteio();
         Collection<Participante> colecaoParticipante = bancoParticipante.getParticipantes();
 

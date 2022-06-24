@@ -1,28 +1,38 @@
 package com.example.sorteiobeca.service;
 
-import com.example.sorteiobeca.Classes.BancoParticipante;
+import com.example.sorteiobeca.Classes.BancoParticipantesDeferidos;
 import com.example.sorteiobeca.Classes.Participante;
+import com.example.sorteiobeca.interfaces.Banco;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.NoSuchElementException;
 
-import java.util.Random;
 import java.util.Scanner;
 import java.io.FileReader;
 
 
 public class LerParticipanteDeArquivo {
 
-    BancoParticipante banco;
+    Banco banco;
     String caminhoParaArquivo;
 
-    public LerParticipanteDeArquivo(BancoParticipante banco) {
+    public LerParticipanteDeArquivo(Banco banco) {
         this.banco = banco;
+        System.setProperty("file.encoding", "UTF-8");
+    }
+
+    public LerParticipanteDeArquivo(){
+        //Construtor default
+        System.setProperty("file.encoding", "UTF-8");
     }
 
     public void setCaminhoParaArquivo(String caminhoParaArquivo) {
         this.caminhoParaArquivo = caminhoParaArquivo;
+    }
+
+    public void setBanco(Banco banco) {
+        this.banco = banco;
     }
 
     public void LerEAdicionar() throws IOException {
@@ -38,7 +48,7 @@ public class LerParticipanteDeArquivo {
                     String nome = linhaEntrada.next();
                     String email = linhaEntrada.next();
 
-                    this.banco.adicionar(new Participante(nome, email));
+                    this.banco.adiciona(new Participante(nome, email));
 
                 } catch (NoSuchElementException e) {
                     e.printStackTrace();

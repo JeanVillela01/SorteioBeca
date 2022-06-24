@@ -1,6 +1,6 @@
 package com.example.sorteiobeca.Controller;
 
-import com.example.sorteiobeca.Classes.BancoParticipante;
+import com.example.sorteiobeca.Classes.BancoParticipantesDeferidos;
 import com.example.sorteiobeca.Classes.Participante;
 import com.example.sorteiobeca.service.Sorteio;
 
@@ -16,13 +16,13 @@ public class RealizarOSorteioServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         Sorteio novoSorteio = new Sorteio();
-        BancoParticipante banco = new BancoParticipante();
+        BancoParticipantesDeferidos banco = new BancoParticipantesDeferidos();
 
         Participante vencedor = novoSorteio.realizarSorteio(banco.getParticipantes());
 
-        PrintWriter out = response.getWriter();
-
-        out.println("<html><body> E o vencedor foi o: " + vencedor.getNome() +"<p>PARABENS!!</p></body></html>");
+        request.setAttribute("nomeSorteado", vencedor.getNome());
+        RequestDispatcher rd = request.getRequestDispatcher("/Tela_Vencedor.jsp");
+        rd.forward(request, response);
     }
 
     @Override

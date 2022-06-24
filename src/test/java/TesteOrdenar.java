@@ -1,4 +1,4 @@
-import com.example.sorteiobeca.Classes.BancoParticipante;
+import com.example.sorteiobeca.Classes.BancoParticipantesDeferidos;
 import com.example.sorteiobeca.Classes.Participante;
 import com.example.sorteiobeca.service.LerParticipanteDeArquivo;
 
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class TesteOrdenar {
 
     public static void main(String[] args) {
-        BancoParticipante banco = new BancoParticipante();
+        BancoParticipantesDeferidos banco = new BancoParticipantesDeferidos();
         LerParticipanteDeArquivo leitor = new LerParticipanteDeArquivo(banco);
         leitor.setCaminhoParaArquivo("partcipantes2.txt");
         try{

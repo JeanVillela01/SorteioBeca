@@ -1,6 +1,6 @@
 package com.example.sorteiobeca.Controller;
 
-import com.example.sorteiobeca.Classes.BancoParticipante;
+import com.example.sorteiobeca.Classes.BancoParticipantesDeferidos;
 import com.example.sorteiobeca.Classes.Participante;
 
 import javax.servlet.RequestDispatcher;
@@ -16,7 +16,7 @@ public class NovoParticipante extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher rd = req.getRequestDispatcher("Tela_Forms.html");
+        RequestDispatcher rd = req.getRequestDispatcher("/Tela_Forms.html");
         rd.forward(req,resp);
     }
 
@@ -26,11 +26,11 @@ public class NovoParticipante extends HttpServlet {
         String nome = req.getParameter("nome");
         String email = req.getParameter("email");
 
-        BancoParticipante bancoParticipantes = new BancoParticipante();
+        BancoParticipantesDeferidos bancoParticipantes = new BancoParticipantesDeferidos();
         Participante novoParticipante = new Participante(nome, email);
-        bancoParticipantes.adicionar(novoParticipante);
+        bancoParticipantes.adiciona(novoParticipante);
 
-        RequestDispatcher rd = req.getRequestDispatcher("Tela_Forms.html");
+        RequestDispatcher rd = req.getRequestDispatcher("/Tela_Forms.html");
         rd.forward(req,resp);
 
         System.out.println("Foi cadastrado o participante: " + nome);

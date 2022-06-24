@@ -1,4 +1,4 @@
-import com.example.sorteiobeca.Classes.BancoParticipante;
+import com.example.sorteiobeca.Classes.BancoParticipantesDeferidos;
 import com.example.sorteiobeca.service.LerParticipanteDeArquivo;
 
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
 public class LerParticipanteDeArquivoTest {
     public static void main(String[] args) {
 
-        BancoParticipante banco = new BancoParticipante();
+        BancoParticipantesDeferidos banco = new BancoParticipantesDeferidos();
 
         LerParticipanteDeArquivo leitor = new LerParticipanteDeArquivo(banco);
         leitor.setCaminhoParaArquivo("partcipantes2.txt");
