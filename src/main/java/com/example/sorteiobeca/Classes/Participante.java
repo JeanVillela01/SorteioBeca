@@ -36,4 +36,12 @@ public class Participante {
         return email;
 
     }
+
+    @Override
+    public String toString() {
+        return "Participante{" +
+                "nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

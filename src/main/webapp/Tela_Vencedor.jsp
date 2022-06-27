@@ -53,11 +53,26 @@
 </div>
 
 <div class="form">
-    <a href="/SorteioBeca/"> <button type="button" class="botaoBack" onclick=""> CONFIRMAR
-        <i class="fa-solid fa-check"></i> </button></a>
-    <a href="/SorteioBeca/realizarSorteio"> <button type="button" class="botaoBack2" >
-        SORTEAR <i class="fa-solid fa-arrow-rotate-left"> </i></button></a>
+    <form action="/SorteioBeca/" method="post">
+    <input type="submit" name= "botaoConfirmar"  class="botaoBack" value="CONFIRMAR" >
+        <i class="fa-solid fa-check" ></i> </input>
+
+     <input type="submit" value="Sortear"  name="botaoRefazer" class="botaoBack2" >
+        SORTEAR <i class="fa-solid fa-arrow-rotate-left"> </i></input>
+    </form>
 </div>
 
 </body>
+
+
+
+
+<script>
+    function teste(){
+        document.forms[0].acao.value="teste";
+        document.forms[0].action="pagina.jsp";
+        document.forms[0].submit();
+
+    }
+</script>
 </html>

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 
 
@@ -23,7 +24,12 @@ public class ListarParticipantes extends HttpServlet {
         BancoParticipantesDeferidos banco = new BancoParticipantesDeferidos();
         Collection<Participante> participantes = banco.getParticipantes();
 
-        req.setAttribute("participantesSorteio", participantes);
+        ArrayList<Participante> arrayParticipantes = new ArrayList<>(participantes);
+        arrayParticipantes.sort((nome1, nome2) -> nome1.getNome().compareTo(nome2.getNome()));
+
+
+
+        req.setAttribute("participantesSorteio", arrayParticipantes);
         RequestDispatcher rd = req.getRequestDispatcher("/Tabela_Participantes.jsp");
         rd.forward(req, resp);
 

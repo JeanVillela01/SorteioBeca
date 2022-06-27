@@ -2,6 +2,7 @@ package com.example.sorteiobeca.Controller;
 
 import com.example.sorteiobeca.Classes.BancoParticipantesDeferidos;
 import com.example.sorteiobeca.Classes.Participante;
+import com.example.sorteiobeca.Classes.Vencedor;
 import com.example.sorteiobeca.service.Sorteio;
 
 import javax.servlet.*;
@@ -20,6 +21,8 @@ public class RealizarOSorteioServlet extends HttpServlet {
 
         Participante vencedor = novoSorteio.realizarSorteio(banco.getParticipantes());
 
+        Vencedor.setVencedor(vencedor);
+
         request.setAttribute("nomeSorteado", vencedor.getNome());
         RequestDispatcher rd = request.getRequestDispatcher("/Tela_Vencedor.jsp");
         rd.forward(request, response);
@@ -27,7 +30,6 @@ public class RealizarOSorteioServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 
     }
 }
