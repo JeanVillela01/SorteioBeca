@@ -30,8 +30,7 @@ public class NovoParticipante extends HttpServlet {
         Participante novoParticipante = new Participante(nome, email);
         bancoParticipantes.adiciona(novoParticipante);
 
-        RequestDispatcher rd = req.getRequestDispatcher("/Tela_Forms.html");
-        rd.forward(req,resp);
+        resp.sendRedirect("Tela_Forms");
 
         System.out.println("Foi cadastrado o participante: " + nome);
 
