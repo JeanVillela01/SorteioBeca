@@ -46,6 +46,10 @@
 </div>
 
 <div class="form2">
+    <br>
+    <br>
+    <br><br>
+    <p></p>
     <%
         String nomeDoVencedor = (String) request.getAttribute("nomeSorteado");
     %>
@@ -57,8 +61,9 @@
     <input type="submit" name= "botaoConfirmar"  class="botaoBack" value="CONFIRMAR" >
        <!-- <i class="fa-solid fa-check" ></i>--> </input>
 
-     <input type="submit" value="Sortear"  name="botaoRefazer" class="botaoBack2" >
-        SORTEAR <!--<i class="fa-solid fa-arrow-rotate-left"> </i>--></input>
+     <input type="submit"  name="botaoRefazer" class="botaoBack2"
+            value="SORTEAR">
+         <!--<i class="fa-solid fa-arrow-rotate-left"> </i>--></input>
     </form>
 </div>
 
