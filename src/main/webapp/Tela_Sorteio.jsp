@@ -34,8 +34,10 @@
   <div id="teste">
   </div>
   <form>
-      <%int numeroParticipantes = (int)request.getParameter("numeroParticipantes")%>
-  <p>Temos até o momento <%=numeroParticipantes %> de participantes no sorteio!</p>
+      <%
+        String numeroParticipantes = (String) request.getAttribute("numeroParticipantes");
+      %>
+  <p>Temos até o momento <%= numeroParticipantes %> de participantes no sorteio!</p>
    
     <a href="/SorteioBeca/realizarSorteio"><button type="button" class="btn btn-success botaoEnviar"
                                                    >SORTEAR</button></a>

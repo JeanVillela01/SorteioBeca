@@ -52,8 +52,8 @@ public class HomeSorteio extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Banco bancoIndeferidos = new BancoParticipantesIndeferidos();
-        int tamanho = bancoIndeferidos.getParticipantes().size();
+        Banco bancoDeferidos = new BancoParticipantesDeferidos();
+        String tamanho = String.valueOf(bancoDeferidos.getParticipantes().size());
         req.setAttribute("numeroParticipantes", tamanho);
         RequestDispatcher rd = req.getRequestDispatcher("/Tela_Sorteio.jsp");
         rd.forward(req, resp);
@@ -62,12 +62,12 @@ public class HomeSorteio extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getParameter("botaoConfirmar") != null){
-            // TODO: 27/06/2022 Gravar na blackList o vencedor (No padrão NOME ; EMAIL)
-            RequestDispatcher rd = req.getRequestDispatcher("/Tela_Sorteio.html");
+
+            RequestDispatcher rd = req.getRequestDispatcher("/Tela_Sorteio.jsp");
             rd.forward(req, resp);
             System.out.println(Vencedor.getVencedor());
             GravaVencedor gravaVencedor = new GravaVencedor(Vencedor.getVencedor());
-            gravaVencedor.setCaminhoParaArquivo("C:\\blackList.txt");
+            gravaVencedor.setCaminhoParaArquivo("E:\\blacklist.txt");
             gravaVencedor.gravaNaBlackList();
             init();
         }
