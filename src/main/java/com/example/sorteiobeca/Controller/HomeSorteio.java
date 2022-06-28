@@ -5,6 +5,7 @@ import com.example.sorteiobeca.Classes.BancoParticipantesIndeferidos;
 import com.example.sorteiobeca.Classes.Vencedor;
 import com.example.sorteiobeca.interfaces.Banco;
 import com.example.sorteiobeca.interfaces.Validacao;
+import com.example.sorteiobeca.service.GravaVencedor;
 import com.example.sorteiobeca.service.LerParticipanteDeArquivo;
 import com.example.sorteiobeca.service.ValidaIndeferido;
 
@@ -51,7 +52,10 @@ public class HomeSorteio extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        RequestDispatcher rd = req.getRequestDispatcher("/Tela_Sorteio.html");
+        Banco bancoIndeferidos = new BancoParticipantesIndeferidos();
+        int tamanho = bancoIndeferidos.getParticipantes().size();
+        req.setAttribute("numeroParticipantes", tamanho);
+        RequestDispatcher rd = req.getRequestDispatcher("/Tela_Sorteio.jsp");
         rd.forward(req, resp);
     }
 
@@ -62,11 +66,13 @@ public class HomeSorteio extends HttpServlet {
             RequestDispatcher rd = req.getRequestDispatcher("/Tela_Sorteio.html");
             rd.forward(req, resp);
             System.out.println(Vencedor.getVencedor());
+            GravaVencedor gravaVencedor = new GravaVencedor(Vencedor.getVencedor());
+            gravaVencedor.setCaminhoParaArquivo("C:\\blackList.txt");
+            gravaVencedor.gravaNaBlackList();
+            init();
         }
         if(req.getParameter("botaoRefazer") != null){
             resp.sendRedirect("realizarSorteio");
-
-
         }
     }
 }

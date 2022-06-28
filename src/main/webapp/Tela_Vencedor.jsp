@@ -55,17 +55,14 @@
 <div class="form">
     <form action="/SorteioBeca/" method="post">
     <input type="submit" name= "botaoConfirmar"  class="botaoBack" value="CONFIRMAR" >
-        <i class="fa-solid fa-check" ></i> </input>
+       <!-- <i class="fa-solid fa-check" ></i>--> </input>
 
      <input type="submit" value="Sortear"  name="botaoRefazer" class="botaoBack2" >
-        SORTEAR <i class="fa-solid fa-arrow-rotate-left"> </i></input>
+        SORTEAR <!--<i class="fa-solid fa-arrow-rotate-left"> </i>--></input>
     </form>
 </div>
 
 </body>
-
-
-
 
 <script>
     function teste(){
