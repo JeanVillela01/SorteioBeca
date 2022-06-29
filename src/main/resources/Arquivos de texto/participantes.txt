@@ -1,0 +1,17 @@
+Lucas;lucas@email.com
+Lais;Lais@email.com
+Guilherme;guilherme@email.com
+MARCOS ALVES DA SILVA;marcos0560.ma@telefonica.com
+ADRIÉLLE SILVA PEREIRA;adriipery@telefonica.com
+AGNALDO RODRIGO;agn.rodrigo16@telefonica.com
+FABIO SOARES VENTURELLI;soaresventurellifabio@telefonica.com
+ALCIELLE CRISTINA FERREIRA;alcyellecrys@telefonica.com
+JOÃO PEDRO DE BRITO MACENA;jpbmacena@telefonica.com
+ALEX TAJARA OLIVEIRA;alextajara@telefonica.com
+ALLAN SUEDER RODRIGUES;sueder99@telefonica.com
+AMANDA MEIRELES MARTINS;amandanaz@telefonica.com
+AMANDA MENDES YAMASHIRO;amandayamashiro@telefonica.com
+ANANDA MAGALHAES AFONSO;anandamagalhaes004@telefonica.com
+GABRIEL ANTÔNIO DA SILVA;g.antonio_silva@outlook.com
+ANGELA BETÂNIA DE OLIVEIRA SOARES;angelab.soares@bol.com.br
+ANTONIO CARNEIRO DA SILVA JUNIOR;juniorrn2011@

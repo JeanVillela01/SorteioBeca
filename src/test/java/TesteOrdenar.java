@@ -10,7 +10,7 @@ public class TesteOrdenar {
     public static void main(String[] args) {
         BancoParticipantesDeferidos banco = new BancoParticipantesDeferidos();
         LerParticipanteDeArquivo leitor = new LerParticipanteDeArquivo(banco);
-        leitor.setCaminhoParaArquivo("partcipantes2.txt");
+        leitor.setCaminhoParaArquivo("C:\\Users\\Guilh\\IdeaProjects\\EstagioVivo\\Projetos\\src\\main\\resources\\Arquivos de texto\\partcipantes2.txt");
         try{
             leitor.LerEAdicionar();
         } catch (IOException e) {
