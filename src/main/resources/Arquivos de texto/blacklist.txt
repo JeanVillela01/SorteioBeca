@@ -1,0 +1,12 @@
+Shirley;shirley.maekawa@telefonica.com
+Joao Giacoia;joao.giacoia@telefonica.com
+Rodrigo Marques;rodrigo.amarques@telefonica.com
+Amauri Silva;amauri.silva@telefonica.com
+Michel Silva;michel.hsilva@telefonica.com
+Fabiano Stein;fabiano.stein@telefonica.com
+Marcia Cappel;marcia.cappellesso@telefonica.com
+Ana Rodrigues;ana.frodrigues@telefonica.com
+Willian Silva;willianc.silva@telefonica.com
+Michelle Mori;michelle.mori@telefonica.com
+Rodrigo Santos;rodrigo.lsantos@telefonica.com
+Sergio Fernandes;sergio.fernandesmarques@telefonica.com
