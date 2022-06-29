@@ -7,7 +7,7 @@ import java.util.*;
 
 public class BancoParticipantesDeferidos implements Banco {
 
-    private static Set<Participante> participantes = new HashSet<>();
+    private static Set<Participante> participantes;
 
     private static List<Validacao> listaValidacoes;
 
@@ -15,6 +15,10 @@ public class BancoParticipantesDeferidos implements Banco {
         BancoParticipantesDeferidos.listaValidacoes= listaValidacoes;
     }
 
+
+    public void criaColecaoParticipantes() {
+        this.participantes = new HashSet<>();
+    }
 
     public void adiciona(Participante novoParticipante){
 

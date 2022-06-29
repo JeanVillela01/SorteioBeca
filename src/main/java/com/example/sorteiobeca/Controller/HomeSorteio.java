@@ -24,6 +24,7 @@ public class HomeSorteio extends HttpServlet {
     @Override
     public void init() throws ServletException {
         BancoParticipantesDeferidos bancoDeferidos = new BancoParticipantesDeferidos();
+        bancoDeferidos.criaColecaoParticipantes();
         Banco bancoIndeferidos = new BancoParticipantesIndeferidos();
 
         LerParticipanteDeArquivo leitor = new LerParticipanteDeArquivo();
@@ -63,13 +64,18 @@ public class HomeSorteio extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getParameter("botaoConfirmar") != null){
 
-            RequestDispatcher rd = req.getRequestDispatcher("/Tela_Sorteio.jsp");
-            rd.forward(req, resp);
-            System.out.println(Vencedor.getVencedor());
             GravaVencedor gravaVencedor = new GravaVencedor(Vencedor.getVencedor());
             gravaVencedor.setCaminhoParaArquivo("E:\\blacklist.txt");
             gravaVencedor.gravaNaBlackList();
+
             init();
+
+            Banco bancoDeferidos = new BancoParticipantesDeferidos();
+            String tamanho = String.valueOf(bancoDeferidos.getParticipantes().size());
+            req.setAttribute("numeroParticipantes", tamanho);
+            RequestDispatcher rd = req.getRequestDispatcher("/Tela_Sorteio.jsp");
+            rd.forward(req, resp);
+
         }
         if(req.getParameter("botaoRefazer") != null){
             resp.sendRedirect("realizarSorteio");
