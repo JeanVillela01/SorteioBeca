@@ -33,13 +33,12 @@ public class HomeSorteio extends HttpServlet {
         bancoDeferidos.setValidacoes(indeferidos);
 
         try{
-            leitor.setCaminhoParaArquivo("E:\\blacklist.txt");
+            leitor.setCaminhoParaArquivo("C:\\Users\\Guilh\\IdeaProjects\\EstagioVivo\\Projetos\\src\\main\\resources\\Arquivos de texto\\blacklist.txt");
             leitor.setBanco(bancoIndeferidos);
             leitor.LerEAdicionar();
 
             leitor.setBanco(bancoDeferidos);
-            leitor.setCaminhoParaArquivo("E:\\Projetos IntelliJ\\" +
-                    "IdeaProjects\\TesteProjetoSorteio\\SorteioBeca\\partcipantes2.txt");
+            leitor.setCaminhoParaArquivo("C:\\Users\\Guilh\\IdeaProjects\\EstagioVivo\\Projetos\\src\\main\\resources\\Arquivos de texto\\participantes.txt");
             leitor.LerEAdicionar();
         }
         catch(IOException e){
